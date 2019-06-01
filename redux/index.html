@@ -80,6 +80,7 @@
         case REMOVE_TODO :
           return state.filter((todo) => todo.id !== action.id)
         case TOGGLE_TODO :
+          console.log(action)
           return state.map((todo) => todo.id !== action.id ? todo :
             Object.assign({}, todo, {complete: !todo.complete }))
     default :
@@ -149,11 +150,17 @@
           console.log(props)
       return (
         <ul>
-          {/* {props.items.forEach(element => {
-            <li>element.name</li>            
-          })} */}
           {props.items.map((item) => (
-            <li >{item.name}</li>
+            <li key={item.id}>
+              <span
+                onClick={() => props.toggle && props.toggle(item)}
+                style={{textDecoration: item.complete ? 'line-through' : 'none'}}>
+                  {item.name}
+              </span>
+              <button onClick={() => props.removeItem(item)}>
+                X
+              </button>
+            </li>
           ))}
         </ul>
         )
@@ -172,7 +179,15 @@
               complete: false,
               id: generateId()
             }))
+          }
 
+          removeItem = (todo) => {
+            // e.preventDefault()
+            this.props.store.dispatch(removeTodoAction(todo.id))
+          }
+
+          toggleItem = (todo) => {
+            this.props.store.dispatch(toggleTodoAction(todo.id))
           }
 
       render() {
@@ -188,6 +203,8 @@
 
           <List 
           items={this.props.todos}
+          removeItem={this.removeItem}
+          toggle={this.toggleItem}
           />
         </div>
         )
@@ -209,6 +226,7 @@
           componentDidMount() {
         const {store} = this.props
 
+        store.subscribe(() => this.forceUpdate())
       }
       render() {
         const { store } = this.props
