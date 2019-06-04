@@ -1,0 +1,85 @@
+Running (pid 14933) terragrunt apply -no-color -input=false -auto-approve --terragrunt-non-interactive --terragrunt-source-update --terragrunt-source /Users/hzhang/dev/fjord-repos/fjord-burrow/terraform-modules//burrow-elk-service -var-file /Users/hzhang/dev/fjord-repos/fjord-burrow/terraform-environments/stg/account.tfvars -var-file /Users/hzhang/dev/fjord-repos/fjord-burrow/terraform-environments/stg/eu-central-1/region.tfvars -var-file /Users/hzhang/dev/fjord-repos/fjord-burrow/terraform-environments/stg/eu-central-1/qad00/env.tfvars -var-file /Users/hzhang/dev/fjord-repos/fjord-burrow/terraform-environments/stg/eu-central-1/qad00/burrow-elk-service/module.tfvars -var-file /Users/hzhang/dev/fjord-repos/fjord-burrow/terraform-environments/stg/eu-central-1/qad00/burrow-elk-service/monitor.tfvars -var metric_kafka_host=speed-racer-kafka.zeta.tools -var metric_kafka_port=9092 -var fluentd_host=fluentd-logging.inf.auw2.zuora -var fluentd_port=80 ({'TERM_SESSION_ID': 'w0t1p0:64BE64AD-61C2-46BA-A748-986901756125', 'SSH_AUTH_SOCK': '/private/tmp/com.apple.launchd.gqJYipDDYM/Listeners', 'Apple_PubSub_Socket_Render': '/private/tmp/com.apple.launchd.uz2PahRlKy/Render', 'COLORFGBG': '15;0', 'ITERM_PROFILE': 'Mine', 'XPC_FLAGS': '0x0', 'LANG': 'en_US.UTF-8', 'PWD': '/Users/hzhang/dev/react/react-learn/redux', 'SHELL': '/bin/zsh', 'SECURITYSESSIONID': '186a6', 'TERM_PROGRAM_VERSION': '3.2.9', 'TERM_PROGRAM': 'iTerm.app', 'PATH': '/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin', 'COLORTERM': 'truecolor', 'TERM': 'xterm-256color', 'HOME': '/Users/hzhang', 'TMPDIR': '/var/folders/xc/pbx4ftls41nbct17s3f50d_xt7jcl9/T/', 'USER': 'hzhang', 'XPC_SERVICE_NAME': '0', 'LOGNAME': 'hzhang', '__CF_USER_TEXT_ENCODING': '0x7478B269:0x0:0x0', 'ITERM_SESSION_ID': 'w0t1p0:64BE64AD-61C2-46BA-A748-986901756125', 'SHLVL': '1', 'OLDPWD': '/Users/hzhang/dev/react/react-learn', 'ZSH': '/Users/hzhang/.oh-my-zsh', 'PAGER': 'less', 'LESS': '-R', 'LC_CTYPE': 'en_US.UTF-8', 'LSCOLORS': 'Gxfxcxdxbxegedabagacad', '_': '/usr/local/bin/wagon', '__PYVENV_LAUNCHER__': '/usr/local/Cellar/python/3.7.3/bin/python3.7', 'MODULE_TAG': 'master', 'TERRAGRUNT_DOWNLOAD': '/var/folders/xc/pbx4ftls41nbct17s3f50d_xt7jcl9/T/tmpw7l7tnsx'})
+[terragrunt] [/Users/hzhang/dev/fjord-repos/fjord-burrow/terraform-environments/stg/eu-central-1/qad00/burrow-elk-service] 2019/06/03 15:38:13 Running command: terraform --version
+[terragrunt] 2019/06/03 15:38:14 Reading Terragrunt config file at /Users/hzhang/dev/fjord-repos/fjord-burrow/terraform-environments/stg/eu-central-1/qad00/burrow-elk-service/terraform.tfvars
+[terragrunt] 2019/06/03 15:38:14 The --terragrunt-source-update flag is set, so deleting the temporary folder /var/folders/xc/pbx4ftls41nbct17s3f50d_xt7jcl9/T/tmpw7l7tnsx/I98MPp2jccDfkftGVwY-Eu5Gtb4/7qqAJ55Hq4e0edPic6arAXcirtc before downloading source.
+[terragrunt] 2019/06/03 15:38:14 Downloading Terraform configurations from file:///Users/hzhang/dev/fjord-repos/fjord-burrow/terraform-modules into /var/folders/xc/pbx4ftls41nbct17s3f50d_xt7jcl9/T/tmpw7l7tnsx/I98MPp2jccDfkftGVwY-Eu5Gtb4/7qqAJ55Hq4e0edPic6arAXcirtc using terraform init
+[terragrunt] [/Users/hzhang/dev/fjord-repos/fjord-burrow/terraform-environments/stg/eu-central-1/qad00/burrow-elk-service] 2019/06/03 15:38:14 Initializing remote state for the s3 backend
+[terragrunt] [/Users/hzhang/dev/fjord-repos/fjord-burrow/terraform-environments/stg/eu-central-1/qad00/burrow-elk-service] 2019/06/03 15:38:14 WARNING: Versioning is not enabled for the remote state S3 bucket bu-terraform-state-stg. We recommend enabling versioning so that you can roll back to previous versions of your Terraform state in case of error.
+[terragrunt] [/Users/hzhang/dev/fjord-repos/fjord-burrow/terraform-environments/stg/eu-central-1/qad00/burrow-elk-service] 2019/06/03 15:38:14 Running command: terraform init -backend-config=encrypt=true -backend-config=bucket=bu-terraform-state-stg -backend-config=key=eu-central-1/qad00/burrow-elk-service/terraform.tfstate -backend-config=region=us-west-2 -backend-config=dynamodb_table=terraform-locks -backend-config=profile=stg -get=false -get-plugins=false -backend=false -from-module=file:///Users/hzhang/dev/fjord-repos/fjord-burrow/terraform-modules -no-color /var/folders/xc/pbx4ftls41nbct17s3f50d_xt7jcl9/T/tmpw7l7tnsx/I98MPp2jccDfkftGVwY-Eu5Gtb4/7qqAJ55Hq4e0edPic6arAXcirtc
+Copying configuration from "file:///Users/hzhang/dev/fjord-repos/fjord-burrow/terraform-modules"...
+Terraform initialized in an empty directory!
+
+The directory has no Terraform configuration files. You may begin working
+with Terraform immediately by creating Terraform configuration files.
+[terragrunt] 2019/06/03 15:38:15 Copying files from /Users/hzhang/dev/fjord-repos/fjord-burrow/terraform-environments/stg/eu-central-1/qad00/burrow-elk-service into /var/folders/xc/pbx4ftls41nbct17s3f50d_xt7jcl9/T/tmpw7l7tnsx/I98MPp2jccDfkftGVwY-Eu5Gtb4/7qqAJ55Hq4e0edPic6arAXcirtc/burrow-elk-service
+[terragrunt] 2019/06/03 15:38:15 Setting working directory to /var/folders/xc/pbx4ftls41nbct17s3f50d_xt7jcl9/T/tmpw7l7tnsx/I98MPp2jccDfkftGVwY-Eu5Gtb4/7qqAJ55Hq4e0edPic6arAXcirtc/burrow-elk-service
+[terragrunt] [/Users/hzhang/dev/fjord-repos/fjord-burrow/terraform-environments/stg/eu-central-1/qad00/burrow-elk-service] 2019/06/03 15:38:15 Initializing remote state for the s3 backend
+[terragrunt] [/Users/hzhang/dev/fjord-repos/fjord-burrow/terraform-environments/stg/eu-central-1/qad00/burrow-elk-service] 2019/06/03 15:38:15 WARNING: Versioning is not enabled for the remote state S3 bucket bu-terraform-state-stg. We recommend enabling versioning so that you can roll back to previous versions of your Terraform state in case of error.
+[terragrunt] [/Users/hzhang/dev/fjord-repos/fjord-burrow/terraform-environments/stg/eu-central-1/qad00/burrow-elk-service] 2019/06/03 15:38:15 Running command: terraform init -backend-config=bucket=bu-terraform-state-stg -backend-config=key=eu-central-1/qad00/burrow-elk-service/terraform.tfstate -backend-config=region=us-west-2 -backend-config=dynamodb_table=terraform-locks -backend-config=profile=stg -backend-config=encrypt=true
+[0m[1mInitializing modules...[0m
+- module.service
+Getting source "git::ssh://git@git.zias.io/ztlib/application-modules.git//service?ref=1.0.70"
+- module.service.monochrome
+Getting source "../service-color"
+
+[0m[1mInitializing the backend...[0m
+[0m[32m
+Successfully configured the backend "s3"! Terraform will automatically
+use this backend unless the backend configuration changes.[0m
+
+[0m[1mInitializing provider plugins...[0m
+- Checking for available provider plugins on https://releases.hashicorp.com...
+- Downloading plugin for provider "aws" (1.30.0)...
+- Downloading plugin for provider "template" (1.0.0)...
+- Downloading plugin for provider "null" (2.1.2)...
+
+The following providers do not have any version constraints in configuration,
+so the latest version was installed.
+
+To prevent automatic upgrades to new major versions that may contain breaking
+changes, it is recommended to add version = "..." constraints to the
+corresponding provider blocks in configuration, with the constraint strings
+suggested below.
+
+* provider.null: version = "~> 2.1"
+
+[0m[1m[32mTerraform has been successfully initialized![0m[32m[0m
+[0m[32m
+You may now begin working with Terraform. Try running "terraform plan" to see
+any changes that are required for your infrastructure. All Terraform commands
+should now work.
+
+If you ever set or change modules or backend configuration for Terraform,
+rerun this command to reinitialize your working directory. If you forget, other
+commands will detect it and remind you to do so if necessary.[0m
+[terragrunt] 2019/06/03 15:38:28 Running command: terraform apply -no-color -input=false -auto-approve -var-file /Users/hzhang/dev/fjord-repos/fjord-burrow/terraform-environments/stg/account.tfvars -var-file /Users/hzhang/dev/fjord-repos/fjord-burrow/terraform-environments/stg/eu-central-1/region.tfvars -var-file /Users/hzhang/dev/fjord-repos/fjord-burrow/terraform-environments/stg/eu-central-1/qad00/env.tfvars -var-file /Users/hzhang/dev/fjord-repos/fjord-burrow/terraform-environments/stg/eu-central-1/qad00/burrow-elk-service/module.tfvars -var-file /Users/hzhang/dev/fjord-repos/fjord-burrow/terraform-environments/stg/eu-central-1/qad00/burrow-elk-service/monitor.tfvars -var metric_kafka_host=speed-racer-kafka.zeta.tools -var metric_kafka_port=9092 -var fluentd_host=fluentd-logging.inf.auw2.zuora -var fluentd_port=80
+
+data.terraform_remote_state.cluster: Refreshing state...
+data.terraform_remote_state.vpc: Refreshing state...
+data.template_file.health_check_port_mapping: Refreshing state...
+data.template_file.additional_port_mappings: Refreshing state...
+null_resource.load_balancer: Refreshing state... (ID: 2222236984704324178)
+data.template_file.awslog_options: Refreshing state...
+null_resource.load_balancer_exists: Refreshing state... (ID: 3771181103421128623)
+data.template_file.fluentd_options: Refreshing state...
+aws_ecs_task_definition.task: Refreshing state... (ID: bu-qad00-burrow-elk-service)
+aws_alb_target_group.service: Refreshing state... (ID: arn:aws:elasticloadbalancing:eu-central...00-burrow-elk-service/5879d78bfe75b917)
+data.aws_alb.load_balancer: Refreshing state...
+aws_route53_record.service: Refreshing state... (ID: ZWBW4AEC5DP0F_burrow-elk-service-qad00.qad.aec1.zuora_A)
+aws_alb_listener_rule.by_host_header: Refreshing state... (ID: arn:aws:elasticloadbalancing:eu-central...9e41/c37ecb2fc8c24ead/5ec030f9c9829648)
+aws_ecs_service.service: Refreshing state... (ID: arn:aws:ecs:eu-central-1:122972921717:service/burrow-elk-service)
+aws_appautoscaling_target.ecs_target: Refreshing state... (ID: service/burrow-qad00/burrow-elk-service)
+aws_appautoscaling_policy.ecs_policy: Refreshing state... (ID: cpu-target-tracking)
+module.service.module.monochrome.aws_ecs_service.service: Modifying... (ID: arn:aws:ecs:eu-central-1:122972921717:service/burrow-elk-service)
+task_definition: "arn:aws:ecs:eu-central-1:122972921717:task-definition/bu-qad00-burrow-elk-service:4" => "arn:aws:ecs:eu-central-1:122972921717:task-definition/bu-qad00-burrow-elk-service:3"
+module.service.module.monochrome.aws_ecs_service.service: Modifications complete after 2s (ID: arn:aws:ecs:eu-central-1:122972921717:service/burrow-elk-service)
+module.service.module.monochrome.aws_appautoscaling_target.ecs_target: Modifying... (ID: service/burrow-qad00/burrow-elk-service)
+role_arn: "arn:aws:iam::122972921717:role/aws-service-role/ecs.application-autoscaling.amazonaws.com/AWSServiceRoleForApplicationAutoScaling_ECSService" => "arn:aws:iam::122972921717:role/burrow-qad00-eu-central-1-ecs-service"
+module.service.module.monochrome.aws_appautoscaling_target.ecs_target: Modifications complete after 2s (ID: service/burrow-qad00/burrow-elk-service)
+
+Apply complete! Resources: 0 added, 2 changed, 0 destroyed.
+
+Outputs:
+
+url = http://burrow-elk-service-qad00.qad.aec1.zuora
+
